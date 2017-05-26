@@ -1,0 +1,10 @@
+- redirecionar URL aquasub
+- Vídeo background topo
+- sobre nos colpapse <li>
+- Formatar logos topo
+- ESPECIALIDADES trocar SERVIÇOS SUBAQUÁTICOS E BALIZAMENTO grifo ou escafandro
+- trocar textos por <li>
+- trocar icone roda de carro por barragem
+- CAIXAS D'AGUA, PISCINAS E CISTERNAS pegar <li> do banner
+- enviar email com copia para contato.
+- receber lonks rede social
