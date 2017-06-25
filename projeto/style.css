@@ -1415,7 +1415,10 @@ textarea .form-control {
   .intervencao-slider{
     background-image: url("img/intervencaosub-slider.png");
     background-size: 214px 166px;
-    width: 214px;
+    /*width: 214px;*/
+    background-repeat: no-repeat;
+        background-position: center;
+    width: 100%;
     height: 166px;
     margin:0 auto;
   }
@@ -1423,7 +1426,7 @@ textarea .form-control {
   .aqua-slider{
     background-image: url("img/aquasub-logo.png");
     background-size: 480px 164px;
-    width: 480px;
+    width: 100%;
     height: 164px;
     background-position: center;
     margin:0 auto;
@@ -1494,11 +1497,18 @@ textarea .form-control {
 }
 
 @media(max-width:767px ){
+  .agora-somos-nos{
+    display:none;
+  }
+
+  #quem-somos-btn-slider{
+    display:none;
+  }
 	.navbar-collapse{background-color: rgba(0,0,0,0.8);} 
 	.main_nav{text-align: center;}
 	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {background-color: rgba(0,0,0,0.5);}
 /*	#slides {height: 360px !important;}*/
-	.slider_caption {margin-top: 15%;}
+	.slider_caption {margin-top: 10%;}
 	.slider_caption > h2 {font-size: 25px;line-height: 26px;}
 	.slider_caption > p {font-size: 15px;}
 	.slider_btn {font-size: 18px;}
@@ -1540,11 +1550,14 @@ textarea .form-control {
   .wagwep-container ul#portfolio-filter li {width: auto;}
   .wagwep-container ul#portfolio-filter a {text-indent: 0;}
 
+  .img-abrapch, .img-anap{
+    width:100%;
+  }
 }
 
 @media(max-width:480px ){	
 /*	#slides {height: 320px !important;}*/
-  .aqua-slider{ margin-left: 0;   background-size: 180px 74px;background-repeat: no-repeat;width: 180px;height: 74px;}
+  .aqua-slider{ margin-left: 0;   background-size: 180px 74px;background-repeat: no-repeat; height: 74px;}
 	.slider_caption {margin-top: 30%;}
 	.slider_caption > h2 { font-size: 20px;line-height: 22px;margin-bottom: 0px;}
 	.slider_caption > p {font-size: 14px;}
@@ -1604,7 +1617,7 @@ textarea .form-control {
   background-image: url("img/anap.png");
   background-size: 200px 85px;
   height: 85px;
-  width: 200px;
+  /*width: 200px;*/
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -1613,7 +1626,7 @@ textarea .form-control {
   background-image: url("img/abrapch.png");
   background-size: 200px 95px;
   height: 95px;
-  width: 200px;
+  /*width: 200px;*/
   background-repeat: no-repeat;
   background-position: center;  
 }

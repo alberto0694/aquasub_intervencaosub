@@ -19,30 +19,29 @@ function contatoCliente(){
 
 
         $.ajax({
-            type: 'POST',
-            url: 'data/email.php',            
-            data:{	nome_cliente:$("input[name=nome_cliente]").val(),             		
-            		assunto:$("input[name=assunto]").val(),
-            		email:$("input[name=email]").val(),
-            		descricao:$("textarea[name=descricao]").val()
-            },                                                 
-            success: function(data) { 
-              var obj = $.parseJSON(data); 
-              $("#container-response").html('');
-              if(obj.status == "success"){
-              		$("#container-response").append('<div class="alert alert-success"><strong>E-mail enviado para ' + $("input[name=email]").val() + ' com sucesso!</strong> </div>');                              
-              }else{
-              		$("#container-response").append('<div class="alert alert-danger"><strong>Erro no envio!</strong> Erro ao enviar o e-mail, estamos verificando o que ocorreu, obrigado pela paciência.</div>');            
-              }
+							type: 'POST',
+							url: 'data/email.php',            
+							data:{	
+											nome_cliente:$("input[name=nome_cliente]").val(),             		
+											assunto:$("input[name=assunto]").val(),
+											email:$("input[name=email]").val(),
+											descricao:$("textarea[name=descricao]").val()
+							},                                                 
+							success: function(data) { 
+										console.log('data => ', data);
+										var obj = $.parseJSON(data); 
+										$("#container-response").html('');
+										if(obj.status == "success"){
+												$("#container-response").append('<div class="alert alert-success"><strong>E-mail enviado para ' + $("input[name=email]").val() + ' com sucesso!</strong> </div>');                              
+										}else{
+												$("#container-response").append('<div class="alert alert-danger"><strong>Erro no envio!</strong> Erro ao enviar o e-mail, estamos verificando o que ocorreu, obrigado pela paciência.</div>');            
+										}
 
-              $("html, body").animate({scrollTop: $("#container-response").offset().top}, 'slow');
-
-
-
-            },
-            error: function(reason){
-              alert("Erro na requisição.");
-            }
+										$("html, body").animate({scrollTop: $("#container-response").offset().top}, 'slow');
+							},
+							error: function(reason){
+								alert("Erro na requisição.");
+							}
         }); 
 
 
